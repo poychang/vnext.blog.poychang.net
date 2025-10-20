@@ -344,7 +344,7 @@ utterances:
   theme: themename
 ```
 
-where each of the parameters are the respective values ​​provided during the configuration of the Utterances:
+where each of the parameters are the respective values provided during the configuration of the Utterances:
 
 * `repo`:  the repository Utterances will connect to.
 * `issue_term`: the mapping between blog posts and GitHub issues.
