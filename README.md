@@ -10,3 +10,5 @@ npm install
 hexo clean && hexo generate
 hexo server
 ```
+
+Hexo documentation: [https://hexo.io/docs/](https://hexo.io/docs/)
