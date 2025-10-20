@@ -7,5 +7,4 @@ public/
 .deploy*/
 _multiconfig.yml
 
-source/_posts/!draft/
-source/_posts/!RecycleBin/
+source/!draft/

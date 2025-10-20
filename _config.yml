@@ -9,7 +9,7 @@ description: ''
 keywords:
 author: Poy Chang
 language: en
-timezone: ''
+timezone: 'Asia/Taipei'
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
@@ -31,7 +31,6 @@ code_dir: downloads/code
 i18n_dir: :lang
 skip_render:
   - apps/*/**
-  - source/_posts/!draft/**
 
 # Writing
 new_post_name: :title.md # File name of new posts
@@ -94,6 +93,7 @@ pagination_dir: page
 ## include:/exclude: options only apply to the 'source/' folder
 include:
 exclude:
+  - '!draft/**/*'
 ignore:
 
 # Extensions
