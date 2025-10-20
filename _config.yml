@@ -30,6 +30,7 @@ category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
 skip_render:
+  - apps/*/**
 
 # Writing
 new_post_name: :title.md # File name of new posts
@@ -121,8 +122,7 @@ theme_config:
     home: /
     about: /about/
     articles: /archives/
-    projects: https://github.com/poychang
-
+    apps: /apps/
 
   # Links to your social media accounts.
   # The 'icon' keys should correspond to Fontawesome icon names

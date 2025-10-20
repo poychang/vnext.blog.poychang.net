@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <title>Recit From Memory - PWA</title>
+
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="manifest" href="manifest.json" />
+    <!-- Apple Safari -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-title" content="Recit From Memory" />
+    <link rel="apple-touch-icon" href="./assets/images/icon_057.png" sizes="57x57" />
+    <link rel="apple-touch-icon" href="./assets/images/icon_060.png" sizes="60x60" />
+    <link rel="apple-touch-icon" href="./assets/images/icon_072.png" sizes="72x72" />
+    <link rel="apple-touch-icon" href="./assets/images/icon_076.png" sizes="76x76" />
+    <link rel="apple-touch-icon" href="./assets/images/icon_114.png" sizes="114x114" />
+    <link rel="apple-touch-icon" href="./assets/images/icon_120.png" sizes="120x120" />
+    <link rel="apple-touch-icon" href="./assets/images/icon_144.png" sizes="144x144" />
+    <link rel="apple-touch-icon" href="./assets/images/icon_152.png" sizes="152x152" />
+    <link rel="apple-touch-icon" href="./assets/images/icon_167.png" sizes="167x167" />
+    <link rel="apple-touch-icon" href="./assets/images/icon_180.png" sizes="180x180" />
+</head>
+
+<body oncontextmenu="return false">
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item brand-text" href="../index.html"> Recit From Memory </a>
+            <div class="buttons ml-auto mr-2">
+                <!-- <a class="button is-light">
+                        <i class="fa-regular fa-moon"></i>
+                        <i class="fa-regular fa-sun"></i>
+                    </a> -->
+                <a class="button is-light" onclick="fontSizeUp()">
+                    <span class="icon">
+                        <i class="fas fa-plus"></i>
+                    </span>
+                </a>
+                <a class="button is-light" onclick="fontSizeDown()">
+                    <span class="icon">
+                        <i class="fas fa-minus"></i>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="section pt-2">
+        <div class="container">
+            <div id="content" class="is-size-4-mobile">
+                <!-- insert content -->
+            </div>
+        </div>
+    </section>
+
+    <button onclick="topFunction()" id="goToTopBtn" title="Go to top">Top</button>
+
+    <script type="text/javascript" src="js/app.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch('assets/content/一下-弟子規.md')
+                .then(response => response.text())
+                .then(data => {
+                    const lines = data.split('\n');
+                    let newHtml = '';
+                    lines.forEach(line => {
+                        if (line.startsWith('# ')) {
+                            newHtml += `<h1 id="title">${line.substring(2).trim()}</h1>`;
+                            // newHtml += `<p id="subtitle"></p>`;
+                            newHtml += `<hr>`;
+                        } else if (line.startsWith('## ')) {
+                            newHtml += `<br />`;
+                            newHtml += `<h2 class="has-text-weight-bold">${line.substring(3).trim()}</h2>`;
+                        } else if (line.trim().length === 0) {
+                            newHtml += `<br />`;
+                        } else {
+                            newHtml += `<p class="py-3">${line.trim()}</p>`;
+                        }
+                    });
+                    document.getElementById('content').innerHTML = newHtml;
+                })
+                .catch(err => console.error(err));
+        });
+    </script>
+</body>
+
+</html>
