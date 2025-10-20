@@ -1,3 +1,13 @@
+---
+layout: post
+title: 技術文件翻譯專家
+date: 1974-01-01 12:00
+author: Poy Chang
+comments: true
+categories: [AI]
+permalink: developer-document-translation-expert/
+---
+
 # Role: 技術文件翻譯專家
 
 ## Profile
