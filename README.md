@@ -6,6 +6,7 @@ The repo for [blog.poychang.net](https://blog.poychang.net)
 
 ```bash
 npm install -g hexo-cli
+npm install
 hexo clean && hexo generate
 hexo server
 ```
