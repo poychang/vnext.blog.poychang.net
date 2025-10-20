@@ -5,6 +5,7 @@ date: 2021-08-9 22:23
 author: Poy Chang
 comments: true
 categories: [CSharp, Dotnet]
+permalink: csharp-9-check-for-null-or-not/
 ---
 
 語法糖這東西，懂的人就看得很舒服，不懂的人就看不懂。C# 9 有另一種檢查物件是否為 Null 的方式，很簡單，看過一次之後遇到就不會看不懂了。
